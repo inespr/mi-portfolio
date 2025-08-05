@@ -1,0 +1,41 @@
+{
+  "about": "Sobre mí",
+  "experience": "Experiencia",
+  "projects": "Proyectos",
+  "contact": "Contacto",
+  "greeting": "¡Hola! Mi nombre es",
+  "role": "Desarrolladora Frontend",
+  "description": "Desarrolladora Frontend apasionada por crear experiencias web únicas.",
+  "contactMe": "Contáctame",
+  "viewProjects": "Ver Proyectos",
+  "aboutMe": "Sobre Mí",
+  "aboutText1": "Soy una Desarrolladora Frontend con experiencia en crear aplicaciones web modernas.",
+  "aboutText2": "Actualmente estoy enfocada en mejorar mis habilidades en React y TypeScript.",
+  "skills": "Habilidades Técnicas",
+  "downloadCV": "Descargar CV",
+  "experienceTitle": "Experiencia Profesional",
+  "experience1": {
+    "title": "Desarrollador de front-end",
+    "company": "Hiberus",
+    "period": "jun. 2023 - jun. 2025 · 2 años 1 mes",
+    "location": "Almería, Andalucía, España",
+    "type": "Jornada completa · Presencial (jun. 2023 - oct. 2024), Teletrabajo (oct. 2024 - jun. 2025)",
+    "description": "Desarrollo de aplicaciones web y móviles con AngularJS y React Native, aplicando principios SOLID. Participación en proyectos de gran escala y trabajo en equipo multidisciplinar."
+  },
+  "experience2": {
+    "title": "Desarrollador web",
+    "company": "Hiberus",
+    "period": "ene. 2023 - jul. 2023 · 7 meses",
+    "location": "Almería, Andalucía, España",
+    "type": "Contrato de formación · Presencial",
+    "description": "Diseño y desarrollo web con React.js, SASS, Figma y GitHub. Aplicación de principios SOLID y colaboración en el diseño de interfaces atractivas y funcionales."
+  },
+  "experience3": {
+    "title": "Desarrollador de aplicaciones",
+    "company": "Hiberus · Formación Profesional Dual",
+    "period": "abr. 2022 - jun. 2022 · 3 meses",
+    "location": "Almería, Andalucía, España · Híbrido",
+    "type": "Formación Profesional Dual · Presencial",
+    "description": "Desarrollo de aplicaciones con HTML5, CSS, AngularJS, Vite y React Native. Uso de herramientas como Canva y aplicación de buenas prácticas de desarrollo."
+  }
+} 

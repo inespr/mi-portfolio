@@ -1,0 +1,41 @@
+{
+  "about": "Chi sono",
+  "experience": "Esperienza",
+  "projects": "Progetti",
+  "contact": "Contatto",
+  "greeting": "Ciao! Mi chiamo",
+  "role": "Sviluppatrice Frontend",
+  "description": "Sviluppatrice Frontend appassionata di creare esperienze web uniche.",
+  "contactMe": "Contattami",
+  "viewProjects": "Guarda i progetti",
+  "aboutMe": "Chi sono",
+  "aboutText1": "Sono una sviluppatrice Frontend con esperienza nella creazione di applicazioni web moderne.",
+  "aboutText2": "Attualmente mi sto concentrando sul miglioramento delle mie competenze in React e TypeScript.",
+  "skills": "Competenze tecniche",
+  "downloadCV": "Scarica CV",
+  "experienceTitle": "Esperienza professionale",
+  "experience1": {
+    "title": "Sviluppatrice Frontend",
+    "company": "Hiberus",
+    "period": "giu. 2023 - giu. 2025 · 2 anni 1 mese",
+    "location": "Almería, Andalusia, Spagna",
+    "type": "Tempo pieno · In sede (giu. 2023 - ott. 2024), Telelavoro (ott. 2024 - giu. 2025)",
+    "description": "Sviluppo di applicazioni web e mobile con AngularJS e React Native, applicando i principi SOLID. Partecipazione a progetti su larga scala e lavoro di squadra multidisciplinare."
+  },
+  "experience2": {
+    "title": "Sviluppatrice Web",
+    "company": "Hiberus",
+    "period": "gen. 2023 - lug. 2023 · 7 mesi",
+    "location": "Almería, Andalusia, Spagna",
+    "type": "Contratto di formazione · Presenziale",
+    "description": "Progettazione e sviluppo web con React.js, SASS, Figma e GitHub. Applicazione dei principi SOLID e collaborazione nella progettazione di interfacce attraenti e funzionali."
+  },
+  "experience3": {
+    "title": "Sviluppatrice di applicazioni",
+    "company": "Hiberus · Formazione Professionale Duale",
+    "period": "apr. 2022 - giu. 2022 · 3 mesi",
+    "location": "Almería, Andalusia, Spagna · Ibrido",
+    "type": "Formazione Professionale Duale · Presenziale",
+    "description": "Sviluppo di applicazioni con HTML5, CSS, AngularJS, Vite e React Native. Utilizzo di strumenti come Canva e applicazione delle migliori pratiche di sviluppo."
+  }
+} 

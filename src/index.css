@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-primary text-text dark:text-text-dark;
+  }
+
+  * {
+    @apply cursor-none;
+  }
+
+  a, button {
+    @apply relative;
+  }
+
+  a:hover, button:hover {
+    @apply cursor-none;
+  }
+
+  ::selection {
+    background-color: rgb(255 105 180 / 0.2); /* bg-accent-pink/20 */
+    color: #ff69b4;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-white dark:text-white hover:text-text dark:hover:text-text-dark transition-colors duration-300 relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-accent-pink transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold mb-8 text-text dark:text-text-dark relative inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-1/2 h-1 bg-accent-pink rounded-full;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 border-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 4px 24px 0 rgb(255 105 180 / 0.2); /* sombra rosa con 20% opacidad */
+  }
+
+  .card {
+    background-color: rgba(142, 171, 216, 0.5); /* bg-primary/50 */
+    backdrop-filter: blur(4px);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgb(136 146 176 / 0.2); /* border-tertiary/20 */
+    transition: all 0.3s;
+  }
+  .card:hover {
+    border-color: rgb(255 105 180 / 0.5); /* border-accent-pink/50 */
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #ff69b4, #9370db, #ffa500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass-effect {
+    background-color: rgb(10, 25, 47); /* bg-primary/80 */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .section-subtitle {
+    @apply text-xl text-accent-purple mb-4;
+  }
+
+  .button {
+    @apply px-6 py-3 rounded-full bg-accent-purple text-light transition-colors duration-300;
+  }
+
+  .button:hover {
+    background-color: rgb(147 112 219 / 0.8); /* 80% opacidad */
+  }
+
+  .input {
+    @apply bg-secondary/50 border border-accent-purple/20 rounded-lg px-4 py-2 text-light focus:border-accent-purple/40 focus:outline-none transition-colors duration-300;
+  }
+
+  .label {
+    @apply text-light mb-2 block;
+  }
+
+  .error {
+    @apply text-accent-red text-sm mt-1;
+  }
+
+  .success {
+    @apply text-accent-green text-sm mt-1;
+  }
+
+  .warning {
+    @apply text-accent-yellow text-sm mt-1;
+  }
+
+  .info {
+    @apply text-accent-blue text-sm mt-1;
+  }
+
+  .badge {
+    @apply px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-purple {
+    @apply badge bg-accent-purple/20 text-accent-purple;
+  }
+
+  .badge-pink {
+    @apply badge bg-accent-pink/20 text-accent-pink;
+  }
+
+  .badge-orange {
+    @apply badge bg-accent-orange/20 text-accent-orange;
+  }
+
+  .badge-blue {
+    @apply badge bg-accent-blue/20 text-accent-blue;
+  }
+
+  .badge-green {
+    @apply badge bg-accent-green/20 text-accent-green;
+  }
+
+  .badge-yellow {
+    @apply badge bg-accent-yellow/20 text-accent-yellow;
+  }
+
+  .badge-red {
+    @apply badge bg-accent-red/20 text-accent-red;
+  }
+
+  .badge-cyan {
+    @apply badge bg-accent-cyan/20 text-accent-cyan;
+  }
+
+  .badge-indigo {
+    @apply badge bg-accent-indigo/20 text-accent-indigo;
+  }
+
+  .badge-lime {
+    @apply badge bg-accent-lime/20 text-accent-lime;
+  }
+
+  .badge-emerald {
+    @apply badge bg-accent-emerald/20 text-accent-emerald;
+  }
+
+  .badge-teal {
+    @apply badge bg-accent-teal/20 text-accent-teal;
+  }
+
+  .badge-sky {
+    @apply badge bg-accent-sky/20 text-accent-sky;
+  }
+
+  .badge-violet {
+    @apply badge bg-accent-violet/20 text-accent-violet;
+  }
+
+  .badge-fuchsia {
+    @apply badge bg-accent-fuchsia/20 text-accent-fuchsia;
+  }
+
+  .badge-rose {
+    @apply badge bg-accent-rose/20 text-accent-rose;
+  }
+
+  .badge-amber {
+    @apply badge bg-accent-amber/20 text-accent-amber;
+  }
+
+  .badge-stone {
+    @apply badge bg-accent-stone/20 text-accent-stone;
+  }
+
+  .badge-neutral {
+    @apply badge bg-accent-neutral/20 text-accent-neutral;
+  }
+
+  .badge-slate {
+    @apply badge bg-accent-slate/20 text-accent-slate;
+  }
+
+  .badge-zinc {
+    @apply badge bg-accent-zinc/20 text-accent-zinc;
+  }
+
+  .badge-gray {
+    @apply badge bg-accent-gray/20 text-accent-gray;
+  }
+}
+
+/* Animaciones personalizadas */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0a192f; /* bg-primary */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255 105 180 / 0.5); /* bg-accent-pink/50 */
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(255 105 180 / 0.7); /* bg-accent-pink/70 */
+}
+
+/* Gradientes de fondo personalizados para secciones */
+.bg-gradient-hero {
+  background: linear-gradient(135deg, rgb(255 105 180 / 0.1), rgb(147 112 219 / 0.1), rgb(255 165 0 / 0.1));
+}
+.bg-gradient-about {
+  background: linear-gradient(45deg, rgb(147 112 219 / 0.05), rgb(255 105 180 / 0.05), rgb(255 165 0 / 0.05));
+}
+
+a:hover, button:hover, .nav-link:hover, .btn-primary:hover, .card:hover, .section-title:hover {
+  color: #181825 !important; /* negro para modo claro */
+}
+.dark a:hover, .dark button:hover, .dark .nav-link:hover, .dark .btn-primary:hover, .dark .card:hover, .dark .section-title:hover {
+  color: #fff !important; /* blanco para modo oscuro */
+}
+
+/* Efecto de escala global para elementos clicables */
+a, button, .nav-link, .btn-primary, .card, .section-title, .button, .badge, .input, .label, .glass-effect, [role="button"] {
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+a:hover, button:hover, .nav-link:hover, .btn-primary:hover, .card:hover, .section-title:hover, .button:hover, .badge:hover, .input:hover, .label:hover, .glass-effect:hover, [role="button"]:hover {
+  transform: scale(1.07);
+}

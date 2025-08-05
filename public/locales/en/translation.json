@@ -1,0 +1,41 @@
+{
+  "about": "About",
+  "experience": "Experience",
+  "projects": "Projects",
+  "contact": "Contact",
+  "greeting": "Hello! My name is",
+  "role": "Frontend Developer",
+  "description": "Frontend Developer passionate about creating unique web experiences.",
+  "contactMe": "Contact Me",
+  "viewProjects": "View Projects",
+  "aboutMe": "About Me",
+  "aboutText1": "I am a Frontend Developer with experience in creating modern web applications.",
+  "aboutText2": "I am currently focused on improving my skills in React and TypeScript.",
+  "skills": "Technical Skills",
+  "downloadCV": "Download CV",
+  "experienceTitle": "Professional Experience",
+  "experience1": {
+    "title": "Frontend Developer",
+    "company": "Hiberus",
+    "period": "Jun 2023 - Jun 2025 · 2 years 1 month",
+    "location": "Almería, Andalusia, Spain",
+    "type": "Full-time · On-site (Jun 2023 - Oct 2024), Remote (Oct 2024 - Jun 2025)",
+    "description": "Development of web and mobile applications using AngularJS and React Native, applying SOLID principles. Participation in large-scale projects and multidisciplinary teamwork."
+  },
+  "experience2": {
+    "title": "Web Developer",
+    "company": "Hiberus",
+    "period": "Jan 2023 - Jul 2023 · 7 months",
+    "location": "Almería, Andalusia, Spain",
+    "type": "Training contract · On-site",
+    "description": "Web design and development with React.js, SASS, Figma, and GitHub. Application of SOLID principles and collaboration in designing attractive and functional interfaces."
+  },
+  "experience3": {
+    "title": "Application Developer",
+    "company": "Hiberus · Dual Vocational Training",
+    "period": "Apr 2022 - Jun 2022 · 3 months",
+    "location": "Almería, Andalusia, Spain · Hybrid",
+    "type": "Dual Vocational Training · On-site",
+    "description": "Application development with HTML5, CSS, AngularJS, Vite, and React Native. Use of tools like Canva and application of best development practices."
+  }
+} 

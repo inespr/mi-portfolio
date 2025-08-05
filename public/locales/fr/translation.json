@@ -1,0 +1,41 @@
+{
+  "about": "À propos de moi",
+  "experience": "Expérience",
+  "projects": "Projets",
+  "contact": "Contact",
+  "greeting": "Bonjour ! Je m'appelle",
+  "role": "Développeuse Frontend",
+  "description": "Développeuse Frontend passionnée par la création d'expériences web uniques.",
+  "contactMe": "Contactez-moi",
+  "viewProjects": "Voir les projets",
+  "aboutMe": "À propos de moi",
+  "aboutText1": "Je suis une développeuse Frontend avec de l'expérience dans la création d'applications web modernes.",
+  "aboutText2": "Je me concentre actuellement sur l'amélioration de mes compétences en React et TypeScript.",
+  "skills": "Compétences techniques",
+  "downloadCV": "Télécharger le CV",
+  "experienceTitle": "Expérience professionnelle",
+  "experience1": {
+    "title": "Développeuse Frontend",
+    "company": "Hiberus",
+    "period": "juin 2023 - juin 2025 · 2 ans 1 mois",
+    "location": "Almería, Andalousie, Espagne",
+    "type": "Temps plein · Présentiel (juin 2023 - oct. 2024), Télétravail (oct. 2024 - juin 2025)",
+    "description": "Développement d'applications web et mobiles avec AngularJS et React Native, en appliquant les principes SOLID. Participation à des projets de grande envergure et travail d'équipe multidisciplinaire."
+  },
+  "experience2": {
+    "title": "Développeuse Web",
+    "company": "Hiberus",
+    "period": "janv. 2023 - juil. 2023 · 7 mois",
+    "location": "Almería, Andalousie, Espagne",
+    "type": "Contrat de formation · Présentiel",
+    "description": "Conception et développement web avec React.js, SASS, Figma et GitHub. Application des principes SOLID et collaboration à la conception d'interfaces attrayantes et fonctionnelles."
+  },
+  "experience3": {
+    "title": "Développeuse d'applications",
+    "company": "Hiberus · Formation Professionnelle en Alternance",
+    "period": "avr. 2022 - juin 2022 · 3 mois",
+    "location": "Almería, Andalousie, Espagne · Hybride",
+    "type": "Formation Professionnelle en Alternance · Présentiel",
+    "description": "Développement d'applications avec HTML5, CSS, AngularJS, Vite et React Native. Utilisation d'outils comme Canva et application des meilleures pratiques de développement."
+  }
+} 
