@@ -11,17 +11,17 @@ Portfolio personal desarrollado con **React 19**, **TypeScript** y **Tailwind CS
 ### Hero
 | Desktop | Móvil |
 |---|---|
-| ![Hero desktop](./screenshots/hero-desktop.png) | ![Hero móvil](./screenshots/hero-mobile.png) |
+| ![Hero desktop](./screenshots/hero-desktop.PNG) | ![Hero móvil](./screenshots/hero-mobile.PNG) |
 
 ### Experiencia y Skills
 | Experiencia | Sobre mí & Skills |
 |---|---|
-| ![Experiencia](./screenshots/experience.png) | ![Skills](./screenshots/about-skills.png) |
+| ![Experiencia](./screenshots/experience.PNG) | ![Skills](./screenshots/about-skills.PNG) |
 
 ### Proyectos y Contacto
 | Proyectos | Contacto |
 |---|---|
-| ![Proyectos](./screenshots/projects.png) | ![Contacto](./screenshots/contact.png) |
+| ![Proyectos](./screenshots/projects.PNG) | ![Contacto](./screenshots/contact.PNG) |
 
 ---
 
