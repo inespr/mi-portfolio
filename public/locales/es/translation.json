@@ -4,38 +4,38 @@
   "projects": "Proyectos",
   "contact": "Contacto",
   "greeting": "¡Hola! Mi nombre es",
-  "role": "Desarrolladora Frontend",
-  "description": "Desarrolladora Frontend apasionada por crear experiencias web únicas.",
+  "role": "Frontend Developer",
+  "description": "React Native Developer con más de 3 años de experiencia en apps móviles en producción. Especializada en arquitecturas multi-app, TypeScript y APIs REST.",
   "contactMe": "Contáctame",
   "viewProjects": "Ver Proyectos",
   "aboutMe": "Sobre Mí",
-  "aboutText1": "Soy una Desarrolladora Frontend con experiencia en crear aplicaciones web modernas.",
-  "aboutText2": "Actualmente estoy enfocada en mejorar mis habilidades en React y TypeScript.",
+  "aboutText1": "Soy React Native Developer con más de 3 años de experiencia en desarrollo de aplicaciones móviles en producción. Especializada en arquitecturas multi-app con código compartido, generación y despliegue independiente de aplicaciones y desarrollo de nuevas funcionalidades en entornos reales.",
+  "aboutText2": "Acostumbrada a trabajar con TypeScript, APIs REST y metodologías ágiles, con foco en estabilidad, escalabilidad y experiencia de usuario. Actualmente ampliando experiencia en desarrollo web con Next.js, Firebase y Cloudinary.",
   "skills": "Habilidades Técnicas",
   "downloadCV": "Descargar CV",
   "experienceTitle": "Experiencia Profesional",
   "experience1": {
-    "title": "Desarrollador de front-end",
-    "company": "Hiberus",
-    "period": "jun. 2023 - jun. 2025 · 2 años 1 mes",
-    "location": "Almería, Andalucía, España",
-    "type": "Jornada completa · Presencial (jun. 2023 - oct. 2024), Teletrabajo (oct. 2024 - jun. 2025)",
-    "description": "Desarrollo de aplicaciones web y móviles con AngularJS y React Native, aplicando principios SOLID. Participación en proyectos de gran escala y trabajo en equipo multidisciplinar."
+    "title": "Frontend Developer",
+    "company": "Todo Hogar Factory",
+    "period": "Agosto 2025 – Actualidad",
+    "location": "Málaga, España",
+    "type": "Jornada completa",
+    "description": "Desarrollo integral de una solución E-commerce con arquitectura en Next.js y React, CMS privado, Firebase, flujos de imagen con Cloudinary, diseño modular y despliegues escalables."
   },
   "experience2": {
-    "title": "Desarrollador web",
-    "company": "Hiberus",
-    "period": "ene. 2023 - jul. 2023 · 7 meses",
+    "title": "React Native Developer",
+    "company": "Hiberus Tecnología",
+    "period": "2022 – 2025",
     "location": "Almería, Andalucía, España",
-    "type": "Contrato de formación · Presencial",
-    "description": "Diseño y desarrollo web con React.js, SASS, Figma y GitHub. Aplicación de principios SOLID y colaboración en el diseño de interfaces atractivas y funcionales."
+    "type": "Jornada completa",
+    "description": "Desarrollo y mantenimiento de un monorepo en React Native para 5 apps del sector retail, con una base única adaptable a cada tienda. Gestión de flujos whitelabel, resolución de incidencias críticas, mejora continua del rendimiento y trabajo con TypeScript, APIs REST y Git en equipos ágiles."
   },
   "experience3": {
-    "title": "Desarrollador de aplicaciones",
-    "company": "Hiberus · Formación Profesional Dual",
-    "period": "abr. 2022 - jun. 2022 · 3 meses",
-    "location": "Almería, Andalucía, España · Híbrido",
-    "type": "Formación Profesional Dual · Presencial",
-    "description": "Desarrollo de aplicaciones con HTML5, CSS, AngularJS, Vite y React Native. Uso de herramientas como Canva y aplicación de buenas prácticas de desarrollo."
+    "title": "React Native Developer (Proyecto Social)",
+    "company": "Hiberus Tecnología",
+    "period": "Marzo 2023 – Diciembre 2023",
+    "location": "Almería, Andalucía, España",
+    "type": "Proyecto social",
+    "description": "Impacto social en apps comunitarias, mejora de la experiencia de usuario y creación de documentación técnica completa."
   }
-} 
+}

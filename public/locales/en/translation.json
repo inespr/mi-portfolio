@@ -5,37 +5,37 @@
   "contact": "Contact",
   "greeting": "Hello! My name is",
   "role": "Frontend Developer",
-  "description": "Frontend Developer passionate about creating unique web experiences.",
+  "description": "React Native Developer with 3+ years of experience in production mobile apps. Specialized in multi-app architectures, TypeScript and REST APIs.",
   "contactMe": "Contact Me",
   "viewProjects": "View Projects",
   "aboutMe": "About Me",
-  "aboutText1": "I am a Frontend Developer with experience in creating modern web applications.",
-  "aboutText2": "I am currently focused on improving my skills in React and TypeScript.",
+  "aboutText1": "I'm a React Native Developer with 3+ years of experience building production mobile applications. Specialized in multi-app architectures with shared code, independent app generation and deployment, and developing new features in real-world environments.",
+  "aboutText2": "Used to working with TypeScript, REST APIs, and agile methodologies, focused on stability, scalability, and user experience. Currently expanding my expertise in web development with Next.js, Firebase, and Cloudinary.",
   "skills": "Technical Skills",
   "downloadCV": "Download CV",
   "experienceTitle": "Professional Experience",
   "experience1": {
     "title": "Frontend Developer",
-    "company": "Hiberus",
-    "period": "Jun 2023 - Jun 2025 · 2 years 1 month",
-    "location": "Almería, Andalusia, Spain",
-    "type": "Full-time · On-site (Jun 2023 - Oct 2024), Remote (Oct 2024 - Jun 2025)",
-    "description": "Development of web and mobile applications using AngularJS and React Native, applying SOLID principles. Participation in large-scale projects and multidisciplinary teamwork."
+    "company": "Todo Hogar Factory",
+    "period": "August 2025 – Present",
+    "location": "Málaga, Spain",
+    "type": "Full-time",
+    "description": "Full development of an E-commerce solution with Next.js and React architecture, private CMS, Firebase, image workflows with Cloudinary, modular design and scalable deployments."
   },
   "experience2": {
-    "title": "Web Developer",
-    "company": "Hiberus",
-    "period": "Jan 2023 - Jul 2023 · 7 months",
+    "title": "React Native Developer",
+    "company": "Hiberus Tecnología",
+    "period": "2022 – 2025",
     "location": "Almería, Andalusia, Spain",
-    "type": "Training contract · On-site",
-    "description": "Web design and development with React.js, SASS, Figma, and GitHub. Application of SOLID principles and collaboration in designing attractive and functional interfaces."
+    "type": "Full-time",
+    "description": "Development and maintenance of a React Native monorepo for 5 retail apps, with a single shared codebase adaptable to each store. Management of whitelabel flows, resolution of critical incidents, continuous performance improvement, and work with TypeScript, REST APIs and Git in agile teams."
   },
   "experience3": {
-    "title": "Application Developer",
-    "company": "Hiberus · Dual Vocational Training",
-    "period": "Apr 2022 - Jun 2022 · 3 months",
-    "location": "Almería, Andalusia, Spain · Hybrid",
-    "type": "Dual Vocational Training · On-site",
-    "description": "Application development with HTML5, CSS, AngularJS, Vite, and React Native. Use of tools like Canva and application of best development practices."
+    "title": "React Native Developer (Social Project)",
+    "company": "Hiberus Tecnología",
+    "period": "March 2023 – December 2023",
+    "location": "Almería, Andalusia, Spain",
+    "type": "Social project",
+    "description": "Social impact on community apps, user experience improvement and creation of comprehensive technical documentation."
   }
-} 
+}

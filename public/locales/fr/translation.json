@@ -5,37 +5,37 @@
   "contact": "Contact",
   "greeting": "Bonjour ! Je m'appelle",
   "role": "Développeuse Frontend",
-  "description": "Développeuse Frontend passionnée par la création d'expériences web uniques.",
+  "description": "Développeuse React Native avec plus de 3 ans d'expérience en apps mobiles en production. Spécialisée en architectures multi-app, TypeScript et APIs REST.",
   "contactMe": "Contactez-moi",
   "viewProjects": "Voir les projets",
   "aboutMe": "À propos de moi",
-  "aboutText1": "Je suis une développeuse Frontend avec de l'expérience dans la création d'applications web modernes.",
-  "aboutText2": "Je me concentre actuellement sur l'amélioration de mes compétences en React et TypeScript.",
+  "aboutText1": "Je suis une développeuse React Native avec plus de 3 ans d'expérience dans le développement d'applications mobiles en production. Spécialisée dans les architectures multi-app avec code partagé, génération et déploiement indépendant d'applications.",
+  "aboutText2": "Habituée à travailler avec TypeScript, les APIs REST et les méthodologies agiles, avec un focus sur la stabilité, la scalabilité et l'expérience utilisateur.",
   "skills": "Compétences techniques",
   "downloadCV": "Télécharger le CV",
   "experienceTitle": "Expérience professionnelle",
   "experience1": {
     "title": "Développeuse Frontend",
-    "company": "Hiberus",
-    "period": "juin 2023 - juin 2025 · 2 ans 1 mois",
-    "location": "Almería, Andalousie, Espagne",
-    "type": "Temps plein · Présentiel (juin 2023 - oct. 2024), Télétravail (oct. 2024 - juin 2025)",
-    "description": "Développement d'applications web et mobiles avec AngularJS et React Native, en appliquant les principes SOLID. Participation à des projets de grande envergure et travail d'équipe multidisciplinaire."
+    "company": "Todo Hogar Factory",
+    "period": "Août 2025 – Présent",
+    "location": "Málaga, Espagne",
+    "type": "Temps plein",
+    "description": "Développement complet d'une solution E-commerce avec architecture Next.js et React, CMS privé, Firebase, gestion d'images avec Cloudinary, conception modulaire et déploiements scalables."
   },
   "experience2": {
-    "title": "Développeuse Web",
-    "company": "Hiberus",
-    "period": "janv. 2023 - juil. 2023 · 7 mois",
+    "title": "Développeuse React Native",
+    "company": "Hiberus Tecnología",
+    "period": "2022 – 2025",
     "location": "Almería, Andalousie, Espagne",
-    "type": "Contrat de formation · Présentiel",
-    "description": "Conception et développement web avec React.js, SASS, Figma et GitHub. Application des principes SOLID et collaboration à la conception d'interfaces attrayantes et fonctionnelles."
+    "type": "Temps plein",
+    "description": "Développement et maintenance d'un monorepo React Native pour 5 apps du secteur retail, avec une base unique adaptable à chaque magasin. Gestion des flux whitelabel, résolution d'incidents critiques, amélioration continue des performances avec TypeScript, APIs REST et Git en équipes agiles."
   },
   "experience3": {
-    "title": "Développeuse d'applications",
-    "company": "Hiberus · Formation Professionnelle en Alternance",
-    "period": "avr. 2022 - juin 2022 · 3 mois",
-    "location": "Almería, Andalousie, Espagne · Hybride",
-    "type": "Formation Professionnelle en Alternance · Présentiel",
-    "description": "Développement d'applications avec HTML5, CSS, AngularJS, Vite et React Native. Utilisation d'outils comme Canva et application des meilleures pratiques de développement."
+    "title": "Développeuse React Native (Projet Social)",
+    "company": "Hiberus Tecnología",
+    "period": "Mars 2023 – Décembre 2023",
+    "location": "Almería, Andalousie, Espagne",
+    "type": "Projet social",
+    "description": "Impact social sur des apps communautaires, amélioration de l'expérience utilisateur et création de documentation technique complète."
   }
-} 
+}
