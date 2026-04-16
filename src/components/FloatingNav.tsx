@@ -16,9 +16,9 @@ const FloatingNav = () => {
   const [active, setActive]   = useState('hero')
   const [mobile, setMobile]   = useState(() => typeof window !== 'undefined' && window.innerWidth < 520)
 
-  // Tamaño responsive
-  const ITEM_W = mobile ? 50 : 64
-  const ITEM_H = mobile ? 42 : 52
+  // Tamaño responsive — 5×44 + gaps = ~238px, cabe en 320px
+  const ITEM_W = mobile ? 44 : 64
+  const ITEM_H = mobile ? 40 : 52
 
   // Detectar cambio de tamaño
   useEffect(() => {
@@ -41,12 +41,12 @@ const FloatingNav = () => {
       const viewH    = window.innerHeight
       const docH     = document.documentElement.scrollHeight
 
-      if (scrollY + viewH >= docH - 10) {
+      if (scrollY + viewH >= docH - 80) {
         setActive('contact')
         return
       }
 
-      const trigger = scrollY + viewH * 0.4
+      const trigger = scrollY + viewH * 0.65
       for (let i = sections.length - 1; i >= 0; i--) {
         if (sections[i].el.offsetTop <= trigger) {
           setActive(sections[i].id)
@@ -64,10 +64,7 @@ const FloatingNav = () => {
   const pillX       = activeIndex * (ITEM_W + GAP) + GAP
 
   return (
-    <motion.nav
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut' }}
+    <div
       aria-label="Navegación flotante"
       style={{
         position: 'fixed',
@@ -75,8 +72,12 @@ const FloatingNav = () => {
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 50,
-        maxWidth: 'calc(100vw - 24px)',
       }}
+    >
+    <motion.nav
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.8, ease: 'easeOut' }}
     >
       <div
         className="relative flex"
@@ -89,6 +90,7 @@ const FloatingNav = () => {
           WebkitBackdropFilter: 'blur(24px)',
           border: '1px solid rgba(255,255,255,0.09)',
           boxShadow: '0 12px 48px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.03)',
+          touchAction: 'manipulation',
         }}
       >
         {/* Pill deslizante */}
@@ -118,6 +120,7 @@ const FloatingNav = () => {
               href={item.href}
               whileTap={{ scale: 0.88 }}
               aria-current={isActive ? 'page' : undefined}
+              onClick={() => setActive(item.id)}
               className="relative z-10 flex flex-col items-center justify-center"
               style={{
                 width: ITEM_W,
@@ -125,6 +128,7 @@ const FloatingNav = () => {
                 borderRadius: 9999,
                 textDecoration: 'none',
                 gap: mobile ? 0 : 2,
+                WebkitTapHighlightColor: 'transparent',
               }}
             >
               <motion.div
@@ -162,6 +166,7 @@ const FloatingNav = () => {
         })}
       </div>
     </motion.nav>
+    </div>
   )
 }
 
