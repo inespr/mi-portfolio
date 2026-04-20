@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import type { PanInfo } from 'framer-motion';
 import profileImage from '../assets/profile.jpg';
 import logo from '../assets/logo1.png';
 
@@ -7,10 +8,10 @@ const CoinFlipImage = () => {
   const [dragDirection, setDragDirection] = useState<'left' | 'right' | null>(null);
   const controls = useAnimation();
 
-  const handleDragEnd = async ( info: any) => {
+  const handleDragEnd = async (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     const velocity = info.velocity.x;
     setDragDirection(null);
-    
+
     if (Math.abs(velocity) > 300) {
       await controls.start({
         rotateY: [0, 360, 720, 1080, 1440],
@@ -23,7 +24,7 @@ const CoinFlipImage = () => {
     }
   };
 
-  const handleDrag = (info: any) => {
+  const handleDrag = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (info.offset.x > 50) {
       setDragDirection('right');
     } else if (info.offset.x < -50) {
@@ -102,9 +103,9 @@ const CoinFlipImage = () => {
             ease: "easeInOut"
           }}
         >
-          {dragDirection === 'left' ? '¡Suelta para girar!' : 
-           dragDirection === 'right' ? '¡Suelta para girar!' : 
-           '← Arrastra para girar →'}
+          {dragDirection === 'left' ? '¡Suelta para girar!' :
+            dragDirection === 'right' ? '¡Suelta para girar!' :
+              '← Arrastra para girar →'}
         </motion.div>
       </motion.div>
       {dragDirection && (

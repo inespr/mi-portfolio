@@ -3,11 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   FaSun, FaMoon, FaLanguage, FaGithub, FaLinkedin, FaDownload,
   FaChevronDown, FaStar, FaEnvelope, FaPhone, FaBars, FaTimes,
+  FaGlobe
 } from 'react-icons/fa'
 import CustomCursor from './components/CustomCursor'
 import CoinFlipImage from './components/CoinFlipImage'
 import FloatingNav from './components/FloatingNav'
 import { useTranslation } from 'react-i18next'
+import type { i18n } from 'i18next'
 import Logo from './components/Logo'
 import cvPDF from './assets/CV Ines ES.pdf'
 import { useTheme } from './context/ThemeContext'
@@ -98,13 +100,13 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
   const [currentLanguage, setCurrentLanguage] = useState('es')
-  const { t, i18n: i18nInstance } = useTranslation() as { t: (key: string) => string; i18n: { changeLanguage: (lang: string) => void } }
+  const { t, i18n } = useTranslation() as { t: (key: string) => string; i18n: i18n }
   const { isDarkMode, toggleTheme } = useTheme()
   const [repos, setRepos] = useState<GithubRepo[]>([])
   const [reposError, setReposError] = useState(false)
 
-  const typedRole    = useTypewriter(t('role'), 70)
-  const progressRef  = useRef<HTMLDivElement>(null)
+  const typedRole = useTypewriter(t('role'), 70)
+  const progressRef = useRef<HTMLDivElement>(null)
 
   // Scroll progress bar — direct DOM, sin re-renders
   useEffect(() => {
@@ -138,7 +140,7 @@ function App() {
 
   const changeLanguage = (langCode: string) => {
     setCurrentLanguage(langCode)
-    i18nInstance.changeLanguage(langCode)
+    i18n.changeLanguage(langCode)
     setIsLanguageMenuOpen(false)
   }
 
@@ -565,37 +567,21 @@ function App() {
           >
             <h2 className="section-title">{t('projects')}</h2>
             <p className="text-tertiary dark:text-tertiary-dark mt-6 text-sm">
-              Proyectos públicos en{' '}
+              Proyectos destacados y públicos en{' '}
               <a href="https://github.com/inespr" target="_blank" rel="noopener noreferrer" className="text-accent-orange hover:underline">
                 github.com/inespr
               </a>
             </p>
           </motion.div>
 
-          {reposError ? (
-            <div className="card text-center py-10">
-              <p className="text-tertiary dark:text-tertiary-dark mb-4">No se pudieron cargar los repositorios.</p>
-              <a href="https://github.com/inespr" target="_blank" rel="noopener noreferrer" className="btn-primary border-accent-orange text-accent-orange hover:bg-accent-orange/10 inline-flex items-center gap-2">
-                <FaGithub />
-                Ver en GitHub
-              </a>
-            </div>
-          ) : repos.length === 0 ? (
+          {/* Private Projects */}
+          <div className="mb-12">
+            <h3 className="text-xl font-bold text-text dark:text-text-dark mb-6">{t('privateProjectsTitle')}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className="card animate-pulse">
-                  <div className="h-4 bg-white/10 rounded mb-3 w-3/4" />
-                  <div className="h-3 bg-white/05 rounded mb-2 w-full" />
-                  <div className="h-3 bg-white/05 rounded w-2/3" />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {repos.map((repo, i) => (
+              {(i18n.t('privateProjects', { returnObjects: true }) as unknown as Array<{ name: string, description: string, url: string, tech: string[] }>).map((project, i) => (
                 <motion.a
-                  key={repo.id}
-                  href={repo.html_url}
+                  key={project.name}
+                  href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
@@ -608,34 +594,94 @@ function App() {
                 >
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="text-accent-orange font-bold text-base group-hover:text-accent-pink transition-colors leading-snug">
-                      {repo.name}
+                      {project.name}
                     </h3>
-                    <FaGithub size={14} className="text-text/30 dark:text-white/30 group-hover:text-text/70 dark:group-hover:text-white/60 transition-colors shrink-0 mt-0.5 ml-2" />
+                    <FaGlobe size={14} className="text-text/30 dark:text-white/30 group-hover:text-text/70 dark:group-hover:text-white/60 transition-colors shrink-0 mt-0.5 ml-2" />
                   </div>
                   <p className="text-tertiary dark:text-tertiary-dark text-sm leading-relaxed flex-1 mb-4 line-clamp-2">
-                    {repo.description || <span className="italic opacity-50">Sin descripción</span>}
+                    {project.description}
                   </p>
-                  <div className="flex items-center gap-4 text-xs text-tertiary dark:text-tertiary-dark">
-                    {repo.language && (
-                      <span className="flex items-center gap-1.5">
-                        <span
-                          className="w-2.5 h-2.5 rounded-full"
-                          style={{ background: langColorMap[repo.language] || '#888' }}
-                        />
-                        {repo.language}
+                  <div className="flex flex-wrap gap-2 text-xs text-tertiary dark:text-tertiary-dark">
+                    {project.tech.map((tech, idx) => (
+                      <span key={idx} className="bg-white/05 dark:bg-white/05 px-2 py-1 rounded">
+                        {tech}
                       </span>
-                    )}
-                    {repo.stargazers_count > 0 && (
-                      <span className="flex items-center gap-1 text-accent-yellow">
-                        <FaStar size={11} />
-                        {repo.stargazers_count}
-                      </span>
-                    )}
+                    ))}
                   </div>
                 </motion.a>
               ))}
             </div>
-          )}
+          </div>
+
+          {/* Public Repos */}
+          <div>
+            <h3 className="text-xl font-bold text-text dark:text-text-dark mb-6">{t('publicReposTitle')}</h3>
+
+            {reposError ? (
+              <div className="card text-center py-10">
+                <p className="text-tertiary dark:text-tertiary-dark mb-4">No se pudieron cargar los repositorios.</p>
+                <a href="https://github.com/inespr" target="_blank" rel="noopener noreferrer" className="btn-primary border-accent-orange text-accent-orange hover:bg-accent-orange/10 inline-flex items-center gap-2">
+                  <FaGithub />
+                  Ver en GitHub
+                </a>
+              </div>
+            ) : repos.length === 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {[...Array(6)].map((_, i) => (
+                  <div key={i} className="card animate-pulse">
+                    <div className="h-4 bg-white/10 rounded mb-3 w-3/4" />
+                    <div className="h-3 bg-white/05 rounded mb-2 w-full" />
+                    <div className="h-3 bg-white/05 rounded w-2/3" />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {repos.map((repo, i) => (
+                  <motion.a
+                    key={repo.id}
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: Math.min(i * 0.06, 0.4) }}
+                    whileHover={{ y: -4 }}
+                    className="card flex flex-col h-full group"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="text-accent-orange font-bold text-base group-hover:text-accent-pink transition-colors leading-snug">
+                        {repo.name}
+                      </h3>
+                      <FaGithub size={14} className="text-text/30 dark:text-white/30 group-hover:text-text/70 dark:group-hover:text-white/60 transition-colors shrink-0 mt-0.5 ml-2" />
+                    </div>
+                    <p className="text-tertiary dark:text-tertiary-dark text-sm leading-relaxed flex-1 mb-4 line-clamp-2">
+                      {repo.description || <span className="italic opacity-50">Sin descripción</span>}
+                    </p>
+                    <div className="flex items-center gap-4 text-xs text-tertiary dark:text-tertiary-dark">
+                      {repo.language && (
+                        <span className="flex items-center gap-1.5">
+                          <span
+                            className="w-2.5 h-2.5 rounded-full"
+                            style={{ background: langColorMap[repo.language] || '#888' }}
+                          />
+                          {repo.language}
+                        </span>
+                      )}
+                      {repo.stargazers_count > 0 && (
+                        <span className="flex items-center gap-1 text-accent-yellow">
+                          <FaStar size={11} />
+                          {repo.stargazers_count}
+                        </span>
+                      )}
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </section>
 

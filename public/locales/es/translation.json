@@ -37,5 +37,21 @@
     "location": "Almería, Andalucía, España",
     "type": "Proyecto social",
     "description": "Impacto social en apps comunitarias, mejora de la experiencia de usuario y creación de documentación técnica completa."
-  }
+  },
+  "privateProjects": [
+    {
+      "name": "Todo Hogar Factory",
+      "description": "E-commerce desarrollado con Next.js y React. Sitio web principal operado por mí.",
+      "url": "https://todohogarfactory.es",
+      "tech": ["Next.js", "React", "TypeScript"]
+    },
+    {
+      "name": "Admin Todo Hogar Factory",
+      "description": "Panel de administración privado para gestión del E-commerce. Desarrollado y operado por mí.",
+      "url": "https://admin.todohogarfactory.es",
+      "tech": ["Next.js", "React", "Firebase"]
+    }
+  ],
+  "privateProjectsTitle": "Proyectos Privados",
+  "publicReposTitle": "Repositorios Públicos"
 }
